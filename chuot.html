@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <img src="ball.jpg" id="idImg" height="300px"> <br>
+        <p>Click button bellow to move the imgage to right</p> <br>
+        <button type="button" onclick="move_right()">Click me</button>
+        
+    </form>
+</body>
+<script> //qua phải mỗi lần bấm
+      
+    let imgObj = document.getElementById('idImg');
+
+    window.onload = function init() {      
+        imgObj.style.position = 'relative';
+        imgObj.style.left = '0px';
+    }
+
+    function move_right() {
+        imgObj.style.left = parseInt(imgObj.style.left) + 50 + 'px';
+    }
+    
+</script>
+
+<!-- <script> //chỉ qua phải 1 lần
+    
+    function move_right() {
+        let img = document.getElementById('idImg');
+        img.style.position = 'relative';
+        img.style.left += '50px';
+    }
+</script> -->
+
+<!-- <script> //qua phải mỗi lần bấm
+    let img = document.getElementById('idImg');
+    var offsetLeft = 0;
+    
+    function move_right(e) {
+        offsetLeft += 50;
+        img.style.position = "relative";
+        img.style.left = (offsetLeft)+"px";
+        e.preventDefault();     //prevents the page from redirecting
+    }
+
+</script> -->
+
+</html>
