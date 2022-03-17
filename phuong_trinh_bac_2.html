@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Giải phương trình bậc 2: </p>
+    <p>ax<sup>2</sup> + bx + c = 0</p>
+
+    <input type="text" id="id_a" width="5px"> x<sup>2</sup> + 
+    <input type="text" id="id_b" width="5px">x + 
+    <input type="text" id="id_c" width="5px"> = 0 <br> <br>
+   
+    <button id="Giai" onclick="giai_pt2()">Giải toán</button>
+    <p id="id_x"></p>
+
+</body>
+<script>
+
+    function giai_pt2() {
+
+        var a = parseInt(document.getElementById('id_a').value);
+        var b = parseInt(document.getElementById('id_b').value);
+        var c = parseInt(document.getElementById('id_c').value);
+        
+        console.log(a);
+        console.log(b);
+        console.log(c);
+      
+        var x1, x2, x;
+        var delta = b*b - 4 * a * c;
+        
+        if (delta <0) {
+            document.getElementById('id_x').innerHTML='Phương trình VÔ NGHIỆM';
+        } else {
+            if (delta ==0) {
+                x= -b / (2 *a);
+                document.getElementById('id_x').innerHTML='Phương trình nghiệm kép' + x;
+            } else {
+                x1= (-b + Math.sqrt(delta))/(2*a);
+                x2= (-b - Math.sqrt(delta))/(2*a);
+                document.getElementById('id_x').innerHTML='Phương trình có 2 nghiệm ' +x1 + ' và ' +x2 ;
+            }
+        }}
+</script>
+</html>

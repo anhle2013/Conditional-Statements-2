@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <p>Thu nhập chịu thuế</p>    <input type="text" id="id_thu"> <br>
+        <p>Số người phụ thuộc</p>    <input type="text" id="id_ng"> <br>
+        <p>BHXH</p>                  <input type="text" id="id_bh"> <br> <br>
+    </form>
+    
+    <button type="button" onclick="tinh()">Tính</button> <br>
+    <p id="kq"></p>
+
+
+</body>
+<script>
+    function tinh() {
+        var thu= parseInt(document.getElementById('id_thu').value);
+        var ng= parseInt(document.getElementById('id_ng').value);
+        var bh= parseInt(document.getElementById('id_bh').value);
+        var TinhThue, Thue;
+        
+        if (0<ng<4) {
+            TinhThue = thu - ng * 4400000 - bh - 11000000;
+        } else { 
+            TinhThue = thu - 4 * 4400000 - bh - 11000000;
+        }
+        
+        if (TinhThue>0) {
+            if (TinhThue>80000000) {
+                Thue = 18150000 + TinhThue *35/100;
+            } else { if (TinhThue>52000000) {
+                Thue = 9750000 + TinhThue *30/100;
+            } else { if (TinhThue>32000000) {
+                Thue = 4750000 + TinhThue *25/100;
+            } else { if (TinhThue>18000000) {
+                Thue = 1950000 + TinhThue *20/100;
+            } else { if (TinhThue>10000000) {
+                Thue = 750000 + TinhThue *15/100;
+            } else { if (TinhThue>5000000) {
+                Thue = 250000 + TinhThue *10/100;
+            } else { Thue = TinhThue *5/100;
+            }}}}}}
+        } else {
+            Thue = 0;
+        }
+        document.getElementById('kq').innerHTML='Thuế Thu Nhập cá nhân là: ' + Thue;
+    }
+</script>
+</html>

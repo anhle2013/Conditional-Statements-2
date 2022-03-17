@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dien.css">
+</head>
+<body>
+    <p>Nhập lượng điện tiêu thụ (kWh)</p>
+    <input type="text" id="_n">
+    <button type="button" onclick="tinh()">Tính tiền</button>
+
+    <table>
+        <p>Bảng giá điện</p>
+        <tr>
+            <th>STT</th>
+            <th>Sản lượng (kWh)</th>
+            <th>Giá điện</th>
+            <th id="_so">Tiêu thụ (kWh)</th>
+            <th id="_tien">Thành tiền</th>
+        </tr>
+        <tr>
+            <td>Bậc 1</td>
+            <td>0 - 50</td>
+            <td>1678</td>
+            <td id="_n1"></td>
+            <td id="_t1"></td>
+        </tr>
+        <tr>
+            <td>Bậc 2</td>
+            <td>51 - 100</td>
+            <td>1734</td>
+            <td id="_n2"></td>
+            <td id="_t2"></td>
+        </tr>
+        <tr>
+            <td>Bậc 3</td>
+            <td>101 - 200</td>
+            <td>2014</td>
+            <td id="_n3"></td>
+            <td id="_t3"></td>
+        </tr>
+        <tr>
+            <td>Bậc 4</td>
+            <td>201 - 300</td>
+            <td>2536</td>
+            <td id="_n4"></td>
+            <td id="_t4"></td>
+        </tr>
+        <tr>
+            <td>Bậc 5</td>
+            <td>301 - 400</td>
+            <td>2834</td>
+            <td id="_n5"></td>
+            <td id="_t5"></td>
+        </tr>
+        <tr>
+            <td>Bậc 6</td>
+            <td>Trên 400</td>
+            <td>2927</td>
+            <td id="_n6"></td>
+            <td id="_t6"></td>
+        </tr>
+        <tr style="color: red;">
+            <td colspan="3" style="background-color: rgb(208, 255, 0);">TỔNG</td>
+            <td id="_tongdien"></td>
+            <td id="_tongtien"></td>
+        </tr>
+    </table>
+</body>
+<script src="dien.js"> </script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nhập 3 cạnh tam giác:</p>
+
+    <input type="text" id="a"> Cạnh a <br>
+    <input type="text" id="b"> Cạnh b <br>
+    <input type="text" id="c"> Cạnh c <br> <br>
+    <button type="button" onclick="kq()">Kết quả</button>
+    <p id="kq"></p>
+
+</body>
+<script>
+    function kq() {
+        var a= parseInt(document.getElementById('a').value);
+        var b= parseInt(document.getElementById('b').value);
+        var c= parseInt(document.getElementById('c').value);
+        console.log(a,b,c);
+        var dk1 = ((a>0) && (b>0) && (c>0));
+        var dk2 = ((a+b) >c) && ((a+c) >b) && ((b+c) >a);
+        if ( dk1 && dk2) {
+            document.getElementById('kq').innerHTML='3 cạnh nhập vào là 1 tam giác';
+        } else {
+            document.getElementById('kq').innerHTML='không thể tạo tam giác';
+        }
+    }
+</script>
+</html>

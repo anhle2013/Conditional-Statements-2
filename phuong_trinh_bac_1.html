@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Giải phương trình bậc 1: ax +b =0</p>
+
+    <input type="text" id="id_a"> x + <input type="text" id="id_b"> = 0 <br>
+
+    <br><br>
+    <button id="Giai" onclick="giai()">Giải toán</button>
+    <p id="id_x"></p>
+
+</body>
+<script>
+
+    function giai() {
+
+        var a = parseInt(document.getElementById('id_a').value);
+        var b = parseInt(document.getElementById('id_b').value);
+       
+        console.log(a);
+        console.log(b);
+       
+        if (a==0) {
+        if (b==0) {
+            document.getElementById('id_x').innerHTML='Phương trình VÔ SỐ NGHIỆM';
+        } else {
+            document.getElementById('id_x').innerHTML='Phương trình VÔ NGHIỆM';
+        }
+    } else {
+        var x= -b/a;
+        document.getElementById('id_x').innerHTML='Phương trình có nghiệm x=' + x;
+    }
+    }
+    
+    
+</script>
+</html>

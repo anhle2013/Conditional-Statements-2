@@ -37,4 +37,5 @@ function moveSelection(evt) {
 
 function docReady() {
     window.addEventListener('keydown', moveSelection);
-}
+} 
+

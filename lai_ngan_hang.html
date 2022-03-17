@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <p>Số tiền ban đầu</p>      <input type="text" id="id_P"> <br>
+        <p>Số tháng vay</p>         <input type="text" id="id_n"> <br>
+        <p>Lãi suất hàng tháng</p>  <input type="text" id="id_i"> <br> <br>
+    </form>
+    
+    <button type="button" onclick="tinh()">Tính</button> <br>
+    <p id="kq"></p>
+
+
+</body>
+<script>
+    function tinh() {
+        var P= parseInt(document.getElementById('id_P').value);
+        var n= parseInt(document.getElementById('id_n').value);
+        var i= parseFloat(document.getElementById('id_i').value);
+        var V = P * Math.pow((1+i),n);
+
+        document.getElementById('kq').innerHTML= 'Tổng tiền trả sau ' + n + ' tháng là: ' + V;
+        
+        
+    }
+</script>
+</html>

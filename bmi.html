@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   </head>
+<body>
+    <form action="">
+        <h1>BMI</h1> <br>
+        <p>Height (m) </p>  <input type="text" id="id_h"></input>
+        <p>Weight (kg) </p> <input type="text" id="id_w"></input> <br> <br>
+        <div>
+            <button type="button" onclick="BMI()">Result</button> 
+            <p id="id_r"></p>
+        </div>
+    </form>
+</body>
+<script>
+    
+    
+    function BMI() {
+        var h = parseFloat(document.getElementById('id_h').value);
+        var w = parseFloat(document.getElementById('id_w').value);
+        var bmi = w / (h * h);
+        console.log(bmi);
+
+        if (bmi<18) {
+            document.getElementById('id_r').innerHTML='Underweight';
+        } else { if (bmi<25) {
+            document.getElementById('id_r').innerHTML='Normal';
+                } else { if (bmi<30) {
+                    document.getElementById('id_r').innerHTML='Overweight';
+                        } else {
+                            document.getElementById('id_r').innerHTML='Obese';
+                        }
+                }
+            }
+    }
+    
+</script>
+</html>
