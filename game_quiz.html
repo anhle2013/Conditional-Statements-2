@@ -8,35 +8,112 @@
 </head>
 <body>
     <h1>PUZZLE GAME</h1>
-    <img src=".//quiz/21.jpg" width="30%" onclick="change(1)" id="id_1"> <br>
-    <img src=".//quiz/22.jpg" width="30%" onclick="change(2)" id="id_2"> <br>
-    <img src=".//quiz/13.jpg" width="30%" onclick="change(3)" id="id_3"> <br>
-    <img src=".//quiz/34.jpg" width="30%" onclick="change(4)" id="id_4"> <br>
-    <img src=".//quiz/35.jpg" width="30%" onclick="change(5)" id="id_5"> <br>
+    <img src=".//quiz/11.jpg" width="30%" onclick="changeImage(1)" id="img1" alt="1"> <br>
+    <img src=".//quiz/12.jpg" width="30%" onclick="changeImage(2)" id="img2" alt="1"> <br>
+    <img src=".//quiz/13.jpg" width="30%" onclick="changeImage(3)" id="img3" alt="1"> <br>
+    <img src=".//quiz/14.jpg" width="30%" onclick="changeImage(4)" id="img4" alt="1"> <br>
+    <img src=".//quiz/15.jpg" width="30%" onclick="changeImage(5)" id="img5" alt="1"> <br>
 
 </body>
     <script>
-    function change(x){
-        switch (x) {
-            case 1:
-                document.getElementById("id_1").src = ".//quiz/31.jpg";
-                document.getElementById("id_1").src = ".//quiz/11.jpg";
-                document.getElementById("id_1").src = ".//quiz/21.jpg";
-                break;
-            case 2:
-                document.getElementById("id_2").src = ".//quiz/32.jpg";
-                break;
-            case 3: 
-                document.getElementById("id_3").src = ".//quiz/23.jpg";
-                break;
-            case 4: 
-                document.getElementById("id_4").src = ".//quiz/14.jpg";
-                break;
-            case 5: 
-                document.getElementById("id_5").src = ".//quiz/15.jpg";
-                break;
+
+        function changeImage(number) {
+            let img1 = document.getElementById("img1");
+            let img2 = document.getElementById("img2");
+            let img3 = document.getElementById("img3");
+            let img4 = document.getElementById("img4");
+            let img5 = document.getElementById("img5");
+            
+            let randomAlt = Math.floor(Math.random()* 3 + 1);
+
+            let alt1 = parseInt(img1.alt);
+            let alt2 = parseInt(img2.alt);
+            let alt3 = parseInt(img3.alt);
+            let alt4 = parseInt(img4.alt);
+            let alt5 = parseInt(img5.alt);
+            
+            if (number == 1) {
+                alt1 = randomAlt;
+                switch (alt1) {
+                    case 1:
+                        img1.src = "./quiz/11.jpg";
+                        break;
+                    case 2:
+                        img1.src = "./quiz/21.jpg";
+                        break;
+                    case 3:
+                        img1.src = "./quiz/31.jpg";
+                        break;
+                }
+            } else if (number == 2) {
+                alt2 = randomAlt;
+                switch (alt2) {
+                    case 1:
+                        img2.src = "./quiz/12.jpg";
+                        break;
+                    case 2:
+                        img2.src = "./quiz/22.jpg";
+                        break;
+                    case 3:
+                        img2.src = "./quiz/32.jpg";
+                        break;
+                }
+            } else if (number == 3) {
+                alt3 = randomAlt;
+                switch (alt3) {
+                    case 1:
+                        img3.src = "./quiz/13.jpg";
+                        break;
+                    case 2:
+                        img3.src = "./quiz/23.jpg";
+                        break;
+                    case 3:
+                        img3.src = "./quiz/33.jpg";
+                        break;
+                }
+            } else if (number == 4) {
+                alt4 = randomAlt;
+                switch (alt4) {
+                    case 1:
+                        img4.src = "./quiz/14.jpg";
+                        break;
+                    case 2:
+                        img4.src = "./quiz/24.jpg";
+                        break;
+                    case 3:
+                        img4.src = "./quiz/34.jpg";
+                        break;
+                }
+            } else if (number == 5) {
+                alt5 = randomAlt;
+                switch (randomAlt) {
+                    case 1:
+                        img5.src = "./quiz/15.jpg";
+                        break;
+                    case 2:
+                        img5.src = "./quiz/25.jpg";
+                        break;
+                    case 3:
+                        img5.src = "./quiz/35.jpg";
+                        break;
+                }
+            }
+            console.log(alt1,alt2,alt3,alt4,alt5);
+            if (alt1==alt2==alt3==alt4==alt5) {
+                img1.style.border = "3px solid red";
+                img2.style.border = "3px solid red";
+                img3.style.border = "3px solid red";
+                img4.style.border = "3px solid red";
+                img5.style.border = "3px solid red";
+            }else {
+                img1.style.border = "none";
+                img2.style.border = "none";
+                img3.style.border = "none";
+                img4.style.border = "none";
+                img5.style.border = "none";
+            }
+            
         }
-    }
         
     </script>
 

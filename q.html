@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            display: block;
+            margin: 10px auto;
+            height: 100px;
+            width: 500px;
+            border: 3px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img id="image" src="./quiz/11.jpg" alt="0" onclick="Show_cat(0)">
+        <img id="image1" src="./quiz/22.jpg" alt="0" onclick="Show_cat(1)">
+        <img id="image2" src="./quiz/13.jpg" alt="0" onclick="Show_cat(2)">
+        <img id="image3" src="./quiz/34.jpg" alt="0" onclick="Show_cat(3)">
+        <img id="image4" src="./quiz/15.jpg" alt="0" onclick="Show_cat(4)">
+    </div>
+    <script>
+        function Show_cat(stt) {
+    
+    let img_value = document.getElementById("image");
+    let img_value1 = document.getElementById("image1");
+    let img_value2 = document.getElementById("image2");
+    let img_value3 = document.getElementById("image3");
+    let img_value4 = document.getElementById("image4");
+
+    let value_random = Math.floor(Math.random() * 3);
+    let value_alt = parseInt(document.getElementById("image").alt);
+    let value_alt1 = parseInt(document.getElementById("image1").alt);
+    let value_alt2 = parseInt(document.getElementById("image2").alt);
+    let value_alt3 = parseInt(document.getElementById("image3").alt);
+    let value_alt4 = parseInt(document.getElementById("image4").alt);
+    if(stt == 0){
+        if(value_alt == 2){
+            value_random = 0;
+            document.getElementById("image").alt = value_random;
+        }else{
+            value_random = value_alt + 1;
+            document.getElementById("image").alt = value_random;
+        }
+        switch(value_random){
+            case 0:
+                img_value.src = "./quiz/11.jpg";
+                break;
+            case 1:
+                img_value.src = "./quiz/21.jpg";
+                break;
+            case 2:
+                img_value.src = "./quiz/31.jpg";
+                break;
+        }
+        console.log(value_random);
+    }else if(stt == 1){
+        if(value_alt1 == 2){
+            value_random = 0;
+            document.getElementById("image1").alt = value_random;
+        }else{
+            value_random = value_alt1 + 1;
+            document.getElementById("image1").alt = value_random;
+        }
+        switch(value_random){
+            case 0:
+                img_value1.src = "./quiz/12.jpg";
+                break;
+            case 1:
+                img_value1.src = "./quiz/22.jpg";
+                break;
+            case 2:
+                img_value1.src = "./quiz/32.jpg";
+                break;
+        }
+        console.log(value_random);
+    }else if(stt == 2){
+        if(value_alt2 == 2){
+            value_random = 0;
+            document.getElementById("image2").alt = value_random;
+        }else{
+            value_random = value_alt2 + 1;
+            document.getElementById("image2").alt = value_random;
+        }
+        switch(value_random){
+            case 0:
+                img_value2.src = "./quiz/13.jpg";
+                break;
+            case 1:
+                img_value2.src = "./quiz/23.jpg";
+                break;
+            case 2:
+                img_value2.src = "./quiz/33.jpg";
+                break;
+        }
+        console.log(value_random);
+    }else if(stt == 3){
+        if(value_alt3 == 2){
+            value_random = 0;
+            document.getElementById("image3").alt = value_random;
+        }else{
+            value_random = value_alt3 + 1;
+            document.getElementById("image3").alt = value_random;
+        }
+        switch(value_random){
+            case 0:
+                img_value3.src = "./quiz/14.jpg";
+                break;
+            case 1:
+                img_value3.src = "./quiz/24.jpg";
+                break;
+            case 2:
+                img_value3.src = "./quiz/34.jpg";
+                break;
+        }
+        console.log(value_random);
+    }else {
+        if(value_alt4 == 2){
+            value_random = 0;
+            document.getElementById("image4").alt = value_random;
+        }else{
+            value_random = value_alt4 + 1;
+            document.getElementById("image4").alt = value_random;
+        }
+        switch(value_random){
+            case 0:
+                img_value4.src = "./quiz/15.jpg";
+                break;
+            case 1:
+                img_value4.src = "./quiz/25.jpg";
+                break;
+            case 2:
+                img_value4.src = "./quiz/35.jpg";
+                break;
+        }
+        console.log(value_random);
+    }
+    let value = parseInt(document.getElementById("image").alt);
+    let value1= parseInt(document.getElementById("image1").alt);
+    let value2 = parseInt(document.getElementById("image2").alt);
+    let value3 = parseInt(document.getElementById("image3").alt);
+    let value4 = parseInt(document.getElementById("image4").alt);
+    if((value == value1 ) &&(value1 == value2 ) && (value2 == value3) && (value3 == value4)){
+        document.getElementById("image").style.border = "3px solid red";
+        document.getElementById("image1").style.border = "3px solid red";
+        document.getElementById("image2").style.border = "3px solid red";
+        document.getElementById("image3").style.border = "3px solid red";
+        document.getElementById("image4").style.border = "3px solid red";
+    }else {
+        document.getElementById("image").style.border = "none";
+        document.getElementById("image1").style.border = "none";
+        document.getElementById("image2").style.border = "none";
+        document.getElementById("image3").style.border = "none";
+        document.getElementById("image4").style.border = "none";
+    }
+}
+    </script>
+</body>
+</html>
