@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table style="text-align: center;">
+        <caption><input type="text" id="_value" readonly=""></caption>
+        <tbody>
+            <tr>
+                <td><button onclick="document.getElementById('_value').value +='1'">1</button></td>
+                <td><button onclick="document.getElementById('_value').value +='2'">2</button></td>
+                <td><button onclick="document.getElementById('_value').value +='3'">3</button></td>
+                <td><button onclick="document.getElementById('_value').value +='+'">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="document.getElementById('_value').value +='4'">4</button></td>
+                <td><button onclick="document.getElementById('_value').value +='5'">5</button></td>
+                <td><button onclick="document.getElementById('_value').value +='6'">6</button></td>
+                <td><button onclick="document.getElementById('_value').value +='-'">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="document.getElementById('_value').value +='7'">7</button></td>
+                <td><button onclick="document.getElementById('_value').value +='8'">8</button></td>
+                <td><button onclick="document.getElementById('_value').value +='9'">9</button></td>
+                <td><button onclick="document.getElementById('_value').value +='*'">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="document.getElementById('_value').value =''">C</button></td>
+                <td><button onclick="document.getElementById('_value').value +='0'">0</button></td>
+                <td><button onclick="document.getElementById('_value').value = eval(document.getElementById('_value').value)">=</button></td>
+                <td><button onclick="document.getElementById('_value').value +='/'">/</button></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
